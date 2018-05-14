@@ -1,25 +1,41 @@
+" --------------------------------------------------------------------------- "
+" ------------------------------- General ----------------------------------- "
+" --------------------------------------------------------------------------- "
+
 " Turn off the compatibility mode. (Always use the latest Vim features.)
 set nocp
 
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
 
+" Automatically reload changed files.
+set autoread
+
+" Disable swap files
+set nobackup
+set noswapfile
+
+" Make the backspace function properly
+set backspace=indent,eol,start
+
 " TAB/INDENTATION STUFF
 filetype plugin indent on
 " Turn on the auto-intentation feature.
 set autoindent
-" Display tabs as 4 whitespace characters.
-set tabstop=4
-" When indenting with '>' or '<', use 4 whitespaces.
-set shiftwidth=4
-" On pressing tab, insert 4 spaces
+" Display tabs as 2 whitespace characters.
+set tabstop=2
+" When indenting w2th '>' or '<', use 2 whitespaces.
+set shiftwidth=2
+" On pressing tab, insert 2 spaces
 set expandtab
 
 " Highlight columns 80 and 100.
 set colorcolumn=80,100
 
-" Highlight all search results.set
+" Highlight all search results.
 set hlsearch
+" Enable incremental searching.
+set incsearch
 
 " Always show statusline
 set laststatus=2
@@ -34,9 +50,11 @@ set number
 set relativenumber
 
 " --------------------------------------------------------------------------- "
+" ------------------------------- Plugins ----------------------------------- "
+" --------------------------------------------------------------------------- "
 
 " Add Powerline Vim binding to the Runtime Path.
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set rtp+=~/Library/Python/3.6/lib/python/site-packages/powerline/bindings/vim
 
 " Enable pathogen!
 execute pathogen#infect()
@@ -44,7 +62,7 @@ execute pathogen#infect()
 " Use the `codedark` theme (Visual Studio like)
 colorscheme codedark
 
-" Syntactic stuff
+" Syntastic stuff
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -54,9 +72,40 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Syntactic + ESLint
+" Syntastic + ESLint
 let g:syntastic_javascript_checkers=['eslint']
 
 " Use the project-specific 'eslint' binary
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 
+" NERDTree - always show hidden files
+let NERDTreeShowHidden=1
+let NERDTreeShowLineNumbers=1
+autocmd FileType nerdtree setlocal relativenumber
+
+" CtrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+set wildignore+=*.pyc                       " < ---------- Python
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip    " < ---------- Linux/MacOSX
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe " < ---------- Windows
+
+" indentLine
+let g:indentLine_char = '⎸'
+let g:indentLine_color_term = 239
+
+" vim-json
+let g:vim_json_syntax_conceal = 0
+
+" vim-gitgutter
+set updatetime=1000 " <- refresh vim buffers every second
+
+" --------------------------------------------------------------------------- "
+" ------------------------------- Mappings ---------------------------------- "
+" --------------------------------------------------------------------------- "
+
+map <silent> <C-n> :NERDTreeToggle<CR>
+map <silent> <C-m> :NERDTreeFind<CR>
+
+nnoremap Q @q
+vnoremap Q :norm @q<cr>
