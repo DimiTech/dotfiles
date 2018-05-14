@@ -10,6 +10,7 @@ powerline
 nerdtree
 ctrlp
 auto-pairs
+indentLine
 vim-gitgutter
 vim-fugitive
 silver
