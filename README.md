@@ -15,7 +15,6 @@ vim-fugitive
 silver
 vim-ags
 emmet-vim
-git-gutter
 ```
 
 The theme is called `codedark`, influenced by Visual Studio colors.
