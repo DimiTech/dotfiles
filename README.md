@@ -1,4 +1,4 @@
-# Vim
+## Vim
 
 ### Installing plugins and theming:
 
@@ -19,3 +19,7 @@ emmet-vim
 ```
 
 The theme is called `codedark`, influenced by Visual Studio colors.
+
+## Bash
+
+A bash framework called `bash-it` is used, along with its `pro` theme.
