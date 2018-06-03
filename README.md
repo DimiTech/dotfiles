@@ -13,6 +13,7 @@ auto-pairs
 indentLine
 vim-gitgutter
 vim-fugitive
+diffchar
 silver
 vim-ags
 emmet-vim
