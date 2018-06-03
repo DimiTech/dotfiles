@@ -1,9 +1,9 @@
 [user]
-	email = dusan_dimitric@yahoo.com
-	name = Dusan Dimitric
+  email = dusan_dimitric@yahoo.com
+  name = Dusan Dimitric
 [github]
   user = DusanDimitric
 [push]
-	default = simple
+  default = simple
 [diff]
   tool = vimdiff
