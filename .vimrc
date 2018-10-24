@@ -18,14 +18,24 @@ set noswapfile
 " Make the backspace function properly
 set backspace=indent,eol,start
 
+" Yank/Paste in an out of Vim
+set clipboard^=unnamed,unnamedplus
+
+" Preserve clipboard contents when exiting Vim:
+" OPTION 1: copy to xclip on exit
+" autocmd VimLeave * call system("xclip -o | xclip -selection c") " WARNING: LINUX ONLY!!!
+" OPTION 2: Install Parcellite or glipper for Gnome, or klipper for KDE:
+" sudo apt-get install parcellite
+" TODO: Find a clean, x-platform solution for this
+
 " TAB/INDENTATION STUFF
 filetype plugin indent on
 " Turn on the auto-intentation feature.
 set autoindent
 " Display tabs as 2 whitespace characters.
 set tabstop=2
-" When indenting w2th '>' or '<', use 2 whitespaces.
-set shiftwidth=2
+" When indenting with '>' or '<', use 2 whitespaces.
+set shiftwidth=2 " <------------------------------------- PROBLEMATIC WITH nginx AND OTHER CONFIGURATION FILES. When set to 4 works fine.
 " On pressing tab, insert 2 spaces
 set expandtab
 
@@ -53,14 +63,14 @@ set relativenumber
 " ------------------------------- Plugins ----------------------------------- "
 " --------------------------------------------------------------------------- "
 
+" Use the `codedark` theme (Visual Studio like)
+colorscheme codedark
+
 " Add Powerline Vim binding to the Runtime Path.
 set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
 " Enable pathogen!
 execute pathogen#infect()
-
-" Use the `codedark` theme (Visual Studio like)
-colorscheme codedark
 
 " Syntastic stuff
 set statusline+=%#warningmsg#
@@ -110,7 +120,7 @@ let g:indentLine_color_term = 0
 let g:vim_json_syntax_conceal = 0
 
 " vim-gitgutter
-set updatetime=1000 " <- refresh vim buffers every second
+set updatetime=500 " <- refresh vim buffers every 500ms
 
 " --------------------------------------------------------------------------- "
 " ------------------------------ Mappings ----------------------------------- "
