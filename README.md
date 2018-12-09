@@ -17,6 +17,7 @@ ctrlp
 auto-pairs
 indentLine
 supertab
+surround.vim
 
 vim-gitgutter
 vim-fugitive
