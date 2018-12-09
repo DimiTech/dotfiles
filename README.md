@@ -6,6 +6,7 @@ The following plug-ins are used:
 ```
 pathogen
 syntastic
+tsuquyomi
 powerline
 nerdtree
 ctrlp
