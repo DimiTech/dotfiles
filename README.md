@@ -24,7 +24,7 @@ The theme is called `codedark`, influenced by Visual Studio colors.
 ### nginx syntax support:
 
 Here is how to set it up:
-https://serverfault.com/questions/390757/how-to-set-vim-filetype-when-editing-nginx-config-files#comment1142394_782503
+* https://serverfault.com/questions/390757/how-to-set-vim-filetype-when-editing-nginx-config-files#comment1142394_782503
 
 ## Bash
 
