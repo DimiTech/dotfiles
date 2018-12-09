@@ -5,18 +5,26 @@
 The following plug-ins are used:
 ```
 pathogen
+
 syntastic
 tsuquyomi
+
 powerline
+
 nerdtree
 ctrlp
+
 auto-pairs
 indentLine
+supertab
+
 vim-gitgutter
 vim-fugitive
+
 diffchar
 silver
 vim-ags
+
 emmet-vim
 ```
 
