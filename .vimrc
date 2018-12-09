@@ -60,6 +60,16 @@ set number
 set relativenumber
 
 " --------------------------------------------------------------------------- "
+" ------------------------------ Filetypes ---------------------------------- "
+" --------------------------------------------------------------------------- "
+
+" nginx filetype configuration
+au BufRead,BufNewFile *.nginx set ft=nginx
+au BufRead,BufNewFile */etc/nginx/* set ft=nginx
+au BufRead,BufNewFile */usr/local/nginx/conf/* set ft=nginx
+au BufRead,BufNewFile nginx.conf set ft=nginx
+
+" --------------------------------------------------------------------------- "
 " ------------------------------- Plugins ----------------------------------- "
 " --------------------------------------------------------------------------- "
 
@@ -97,8 +107,8 @@ let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 
 " Syntastic + tsuquyomi (TypeScript)
-let g:tsuquyomi_disable_quickfix = 1
-let g:syntastic_typescript_checkers = ['tsuquyomi']
+" let g:tsuquyomi_disable_quickfix = 1
+" let g:syntastic_typescript_checkers = ['tsuquyomi']
 
 " NERDTree - always show hidden files
 let NERDTreeShowHidden=1
