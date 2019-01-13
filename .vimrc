@@ -107,8 +107,10 @@ let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
 
 " Syntastic + tsuquyomi (TypeScript)
-" let g:tsuquyomi_disable_quickfix = 1
-" let g:syntastic_typescript_checkers = ['tsuquyomi']
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
+" let g:syntastic_typescript_checkers = ['tslint', 'tsc']
+" let g:syntastic_typescript_checkers = ['tsc', 'tslint']
 
 " NERDTree - always show hidden files
 let NERDTreeShowHidden=1
@@ -138,6 +140,12 @@ set updatetime=500 " <- refresh vim buffers every 500ms
 
 map <silent> <C-n> :NERDTreeToggle<CR>
 map <silent> <C-m> :NERDTreeFind<CR>
+
+" CTRL + s - Save
+" https://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
+noremap  <silent> <C-S>      :update<CR>
+vnoremap <silent> <C-S> <C-C>:update<CR>
+inoremap <silent> <C-S> <C-O>:update<CR>
 
 " https://hashrocket.com/blog/posts/8-great-vim-mappings
 nnoremap Q @q
