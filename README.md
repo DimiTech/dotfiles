@@ -27,6 +27,8 @@ silver
 vim-ags
 
 emmet-vim
+
+vim-go (https://github.com/fatih/vim-go)
 ```
 
 The theme is called `codedark`, influenced by Visual Studio colors.
