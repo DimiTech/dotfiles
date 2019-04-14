@@ -77,7 +77,8 @@ au BufRead,BufNewFile nginx.conf set ft=nginx
 colorscheme codedark
 
 " Add Powerline Vim binding to the Runtime Path.
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/        " Linux
+" set rtp+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/ " MacOS
 
 " Enable pathogen!
 execute pathogen#infect()
@@ -91,6 +92,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:statline_syntastic = 0
+
+" ------------------------- Language Specific ------------------------------- "
 
 " Syntastic for C programming
 " Include the SDL2 directory so that errors are not being shown
@@ -102,20 +106,28 @@ let g:syntastic_cpp_include_dirs = ['/usr/local/include/SDL2']
 
 " Syntastic + ESLint
 let g:syntastic_javascript_checkers=['eslint']
-
-" Use the project-specific 'eslint' binary
-let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint' " Use the project-specific 'eslint' binary
 
 " Syntastic + tsuquyomi (TypeScript)
-let g:tsuquyomi_disable_quickfix = 1
-let g:syntastic_typescript_checkers = ['tsuquyomi']
-" let g:syntastic_typescript_checkers = ['tslint', 'tsc']
-" let g:syntastic_typescript_checkers = ['tsc', 'tslint']
+" let g:tsuquyomi_disable_quickfix = 1
+" let g:syntastic_typescript_checkers = ['tsuquyomi']
+
+" vim-go
+" TODO: See if this is necessary
+let g:go_bin_path = "/usr/local/go/bin"
+
+" ------------------------------- General ----------------------------------- "
 
 " NERDTree - always show hidden files
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
+
+" nerdcommenter
+let g:NERDDefaultAlign = 'left' " Prevents nesting the comments
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDAltDelims_c = 1 " Uses // instead of /* */ by default
 
 " CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
