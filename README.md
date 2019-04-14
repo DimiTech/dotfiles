@@ -6,12 +6,10 @@ The following plug-ins are used:
 ```
 pathogen
 
-syntastic
-tsuquyomi
-
 powerline
 
 nerdtree
+nerdcommenter
 ctrlp
 
 auto-pairs
@@ -28,6 +26,10 @@ vim-ags
 
 emmet-vim
 
+syntastic
+
+" Language-specific:
+tsuquyomi
 vim-go (https://github.com/fatih/vim-go)
 ```
 
@@ -37,6 +39,10 @@ The theme is called `codedark`, influenced by Visual Studio colors.
 
 Here is how to set it up:
 * https://serverfault.com/a/782503
+
+## vim-go - Installation
+
+In order to run `:GoInstallBinaries` from vim and for it to work, make sure to run vim as a superuser: `sudo vim`, and then run `:GoInstallBinaries`.
 
 ## Bash
 
