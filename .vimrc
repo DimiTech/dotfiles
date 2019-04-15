@@ -42,6 +42,8 @@ set expandtab
 " Highlight columns 80 and 100.
 set colorcolumn=80,100
 
+set textwidth=79
+
 " Highlight all search results.
 set hlsearch
 " Enable incremental searching.
