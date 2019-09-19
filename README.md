@@ -30,7 +30,12 @@ vim-ags
 emmet-vim
 
 " Language-specific:
+
+" Typescript
+typescript-vim
 tsuquyomi
+
+" Go
 vim-go (https://github.com/fatih/vim-go)
 ```
 
