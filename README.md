@@ -8,6 +8,8 @@ pathogen
 
 powerline
 
+syntastic
+
 nerdtree
 nerdcommenter
 ctrlp
@@ -16,6 +18,7 @@ auto-pairs
 indentLine
 supertab
 surround.vim
+vim-json
 
 vim-gitgutter
 vim-fugitive
@@ -25,8 +28,6 @@ silver
 vim-ags
 
 emmet-vim
-
-syntastic
 
 " Language-specific:
 tsuquyomi
