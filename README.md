@@ -18,6 +18,7 @@ auto-pairs
 indentLine
 supertab
 surround.vim
+rainbow_parentheses (https://github.com/junegunn/rainbow_parentheses.vim)
 vim-json
 
 vim-gitgutter
