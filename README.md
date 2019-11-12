@@ -40,7 +40,13 @@ tsuquyomi
 vim-go (https://github.com/fatih/vim-go)
 ```
 
+### Theme
+
 The theme is called `codedark`, influenced by Visual Studio colors.
+
+### JavaScript syntax support
+
+Syntastic works well with `eslint`, just make sure that `eslint` is installed globally as well as locally: `npm i -g eslint`
 
 ### nginx syntax support:
 
