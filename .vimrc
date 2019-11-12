@@ -5,11 +5,14 @@
 " Turn off the compatibility mode. (Always use the latest Vim features.)
 set nocp
 
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+" Use 256 colors (Use this setting only if your terminal supports 256 colors)
 set t_Co=256
 
 " Automatically reload changed files.
 set autoread
+
+" Show (partial) command in the last line of the screen.
+set showcmd
 
 " Disable swap files
 set nobackup
@@ -30,19 +33,16 @@ set clipboard^=unnamed,unnamedplus
 
 " TAB/INDENTATION STUFF
 filetype plugin indent on
-" Turn on the auto-intentation feature.
-set autoindent
-" Display tabs as 2 whitespace characters.
-set tabstop=2
+
+set autoindent " Turn on the auto-intentation feature.
+set tabstop=2  " Display tabs as 2 whitespace characters.
+set expandtab  " On pressing tab, insert 2 spaces
+
 " When indenting with '>' or '<', use 2 whitespaces.
 set shiftwidth=2 " <------------------------------------- PROBLEMATIC WITH nginx AND OTHER CONFIGURATION FILES. When set to 4 works fine.
-" On pressing tab, insert 2 spaces
-set expandtab
 
 " Highlight columns 80 and 100.
 set colorcolumn=80,100
-
-set textwidth=79
 
 " Highlight all search results.
 set hlsearch
@@ -54,12 +54,10 @@ set laststatus=2
 set showtabline=1
 set noshowmode
 
-" Use syntax coloring
-syntax on
-" Always show line numbers
-set number
-" Use relative line numbering
-set relativenumber
+
+syntax on " Use syntax coloring
+set number " Always show line numbers
+set relativenumber " Use relative line numbering
 
 " --------------------------------------------------------------------------- "
 " ------------------------------ Filetypes ---------------------------------- "
@@ -79,7 +77,7 @@ au BufRead,BufNewFile nginx.conf set ft=nginx
 colorscheme codedark
 
 " Add Powerline Vim binding to the Runtime Path.
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/        " Linux
+set rtp+=/home/d.dimitric/.local/lib/python2.7/site-packages/powerline/bindings/vim/  " Linux
 " set rtp+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/ " MacOS
 
 " Enable pathogen!
@@ -106,19 +104,22 @@ let g:syntastic_c_include_dirs = ['/usr/local/include/SDL2']
 " Include the SDL2 directory so that errors are not being shown
 let g:syntastic_cpp_include_dirs = ['/usr/local/include/SDL2']
 
-" Syntastic + ESLint
+" Syntastic - JavaScript + ESLint
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint' " Use the project-specific 'eslint' binary
 
-" Syntastic + tsuquyomi (TypeScript)
-" let g:tsuquyomi_disable_quickfix = 1
-" let g:syntastic_typescript_checkers = ['tsuquyomi']
+" Syntastic - TypeScript + ESLint
+let g:syntastic_typescript_checkers=['eslint']
+let g:syntastic_typescript_eslint_exe='$(npm bin)/eslint' " Use the project-specific 'eslint' binary
+
+" Tsuquyomi - Disable `tsc` checking, so that it doesn't interfere with Syntastic
+let g:tsuquyomi_disable_quickfix = 1
 
 " vim-go
 " TODO: See if this is necessary
 let g:go_bin_path = "/usr/local/go/bin"
 
-" ------------------------------- General ----------------------------------- "
+" ----------------------------- Other Plugins ------------------------------- "
 
 " NERDTree - always show hidden files
 let NERDTreeShowHidden=1
@@ -144,6 +145,7 @@ let g:indentLine_color_term = 0
 
 " vim-json
 let g:vim_json_syntax_conceal = 0
+set conceallevel=0 " Don't conceal matching quotes and stuff
 
 " vim-gitgutter
 set updatetime=500 " <- refresh vim buffers every 500ms
@@ -153,7 +155,7 @@ set updatetime=500 " <- refresh vim buffers every 500ms
 " --------------------------------------------------------------------------- "
 
 map <silent> <C-n> :NERDTreeToggle<CR>
-map <silent> <C-m> :NERDTreeFind<CR>
+map <silent> <C-j> :NERDTreeFind<CR>
 
 " CTRL + s - Save
 " https://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
