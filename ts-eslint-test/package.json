@@ -1,0 +1,19 @@
+{
+  "name": "ts-eslint-test",
+  "version": "1.0.0",
+  "main": "main.ts",
+  "scripts": {
+    "lint": "eslint ./main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "eslint": "^6.6.0"
+  }
+}
