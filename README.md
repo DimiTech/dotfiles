@@ -14,7 +14,6 @@ nerdtree
 nerdcommenter
 ctrlp
 
-auto-pairs
 indentLine
 supertab
 surround.vim
