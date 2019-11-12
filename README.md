@@ -49,6 +49,14 @@ Syntastic works well with `eslint`, just make sure that `eslint` is installed gl
 
 There is an example project embedded in this repo called `ts-eslint-test` that you can use to test out if `eslint` is working properly inside `vim`.
 
+If the linter doesn't work, try debugging `syntastic` by opening a `typescript` file and executing the following commands in vim:
+
+```
+:let g:syntastic_debug=3
+:SyntasticCheck eslint
+:mes
+```
+
 ### nginx syntax support:
 
 Here is how to set it up:
