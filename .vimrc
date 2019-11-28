@@ -2,6 +2,9 @@
 " ------------------------------- General ----------------------------------- "
 " --------------------------------------------------------------------------- "
 
+" Encryption method
+set cm=blowfish2
+
 " Turn off the compatibility mode. (Always use the latest Vim features.)
 set nocp
 
@@ -36,7 +39,7 @@ filetype plugin indent on
 
 set autoindent " Turn on the auto-intentation feature.
 set tabstop=2  " Display tabs as 2 whitespace characters.
-set expandtab  " On pressing tab, insert 2 spaces
+set expandtab " On pressing tab, insert 2 spaces
 
 " When indenting with '>' or '<', use 2 whitespaces.
 set shiftwidth=2 " <------------------------------------- PROBLEMATIC WITH nginx AND OTHER CONFIGURATION FILES. When set to 4 works fine.
