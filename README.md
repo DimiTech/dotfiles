@@ -16,6 +16,7 @@ ctrlp
 
 indentLine
 supertab
+tabularize
 surround.vim
 rainbow (https://github.com/luochen1990/rainbow)
 vim-json
