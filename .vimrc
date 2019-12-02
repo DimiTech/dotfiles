@@ -169,3 +169,31 @@ inoremap <silent> <C-S> <C-O>:update<CR>
 " https://hashrocket.com/blog/posts/8-great-vim-mappings
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
+
+" --------------------------------------------------------------------------- "
+" ---------------------------- Abbreviations -------------------------------- "
+" --------------------------------------------------------------------------- "
+
+" https://stackoverflow.com/questions/11858927/preventing-trailing-whitespace-when-using-vim-abbreviations/11865489#11865489
+func Eatchar(pat)
+  let c = nr2char(getchar(0))
+  return (c =~ a:pat) ? '' : c
+endfunc
+
+" C
+:autocmd FileType c iabbr #i #include <><Left><C-R>=Eatchar('\s')<CR>
+:autocmd FileType c iabbr cl printf("\n");<Esc>F\i<C-R>=Eatchar('\s')<CR>
+:autocmd FileType c iabbr forl for (int i = 0; i < ; ++i) {<Enter>}<esc>k$7hi
+:autocmd FileType c iabbr fn void () {<Enter><Enter>}<Up><Up><C-O>W<C-R>=Eatchar('\s')<CR>
+
+" JavaScript
+:autocmd FileType javascript iabbr cl console.log('');<C-O>F'<C-R>=Eatchar('\s')<CR>
+" inoremap version of console.log
+" :autocmd FileType javascript inoremap cl console.log('');<C-O>F'<C-R>=Eatchar('\s')<CR>
+:autocmd FileType javascript iabbr forl for (int i = 0; i < ; ++i) {<Enter>}<esc>k$7hi
+:autocmd FileType javascript iabbrev fn function () {<Enter><Enter>}<Up><Up><C-O>W<C-R>=Eatchar('\s')<CR>
+" Without Eatchar()
+" :autocmd FileType javascript iabbrev fn function () {<Enter><Enter>}<Up><Up><C-O>W
+
+" Java
+:autocmd FileType java iabbr psvm public static void main(String[] args){<CR>}<esc>O
