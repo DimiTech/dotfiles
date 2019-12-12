@@ -1,3 +1,7 @@
+## Requirements
+
+**fzf** - used for fuzzy searching, **ctrlp** should use it.
+
 ## Vim
 
 ### Installing plugins and theming:
