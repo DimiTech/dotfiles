@@ -22,6 +22,7 @@ indentLine
 supertab
 tabularize
 surround.vim
+vim-auto-pair
 rainbow (https://github.com/luochen1990/rainbow)
 vim-json
 
