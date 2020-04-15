@@ -162,6 +162,7 @@ map <silent> <C-j> :NERDTreeFind<CR>
 
 " CTRL + s - Save
 " https://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
+" MacOS - CMD + s - Save in Vim running in iTerm2: http://superuser.com/a/1246848
 noremap  <silent> <C-S>      :update<CR>
 vnoremap <silent> <C-S> <C-C>:update<CR>
 inoremap <silent> <C-S> <C-O>:update<CR>
