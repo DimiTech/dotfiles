@@ -87,10 +87,6 @@ au BufRead,BufNewFile nginx.conf set ft=nginx
 " Use the `codedark` theme (Visual Studio like)
 colorscheme codedark
 
-" Add Powerline Vim binding to the Runtime Path.
-set rtp+=/home/d.dimitric/.local/lib/python2.7/site-packages/powerline/bindings/vim/  " Linux
-" set rtp+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/ " MacOS
-
 " Enable pathogen!
 execute pathogen#infect()
 
