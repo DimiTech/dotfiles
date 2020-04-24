@@ -129,12 +129,6 @@ let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 
-" nerdcommenter
-let g:NERDDefaultAlign = 'left' " Prevents nesting the comments
-let g:NERDSpaceDelims = 1
-let g:NERDCommentEmptyLines = 1
-let g:NERDAltDelims_c = 1 " Uses // instead of /* */ by default
-
 " CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
