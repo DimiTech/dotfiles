@@ -15,11 +15,11 @@ powerline
 syntastic
 
 nerdtree
-nerdcommenter
 ctrlp
 
 indentLine
 supertab
+tcomment (https://github.com/tomtom/tcomment_vim)
 tabularize
 surround.vim
 vim-auto-pair
