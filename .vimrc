@@ -2,6 +2,9 @@
 " ------------------------------- General ----------------------------------- "
 " --------------------------------------------------------------------------- "
 
+" Set SPACE as LEADER
+map <SPACE> <leader>
+
 " Encryption method
 set cm=blowfish2
 
@@ -36,6 +39,11 @@ set clipboard^=unnamed,unnamedplus
 
 " TAB/INDENTATION STUFF
 filetype plugin indent on
+
+" Open new vertical split to the right
+set splitright
+" Open new horizontal split to the bottom
+set splitbelow
 
 set autoindent " Turn on the auto-intentation feature.
 set tabstop=2  " Display tabs as 2 whitespace characters.
@@ -131,7 +139,7 @@ autocmd FileType nerdtree setlocal relativenumber
 
 " fzf
 set rtp+=/usr/local/opt/fzf " Add fzf to Runtime Path
-nnoremap <silent> <C-p> :FZF<CR>
+nnoremap <leader>s :<C-u>FZF<CR>
 
 " indentLine
 let g:indentLine_char = '⎸'

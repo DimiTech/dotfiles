@@ -8,6 +8,7 @@
 
 The following plug-ins are used:
 ```
+fzf (Usage explained here: https://dev.to/vintharas/5-minutes-vim-ctrlp-considered-harmful-48eg)
 coc
 
 nerdtree
