@@ -2,13 +2,17 @@
 
 **fzf** - used for fuzzy searching
 
+Useful `fzf` resources:
+- https://dev.to/vintharas/5-minutes-vim-ctrlp-considered-harmful-48eg
+- https://www.youtube.com/watch?v=qgG5Jhi_Els
+
 ## Vim
 
 ### Installing plugins and theming:
 
 The following plug-ins are used:
 ```
-fzf (Usage explained here: https://dev.to/vintharas/5-minutes-vim-ctrlp-considered-harmful-48eg)
+fzf
 coc
 
 nerdtree
