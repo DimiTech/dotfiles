@@ -1,6 +1,6 @@
 ## Requirements
 
-**fzf** - used for fuzzy searching, **ctrlp** should use it.
+**fzf** - used for fuzzy searching
 
 ## Vim
 
@@ -8,14 +8,9 @@
 
 The following plug-ins are used:
 ```
-pathogen
-
-powerline
-
-syntastic
+coc
 
 nerdtree
-ctrlp
 
 indentLine
 supertab
@@ -30,8 +25,6 @@ vim-gitgutter
 vim-fugitive
 
 diffchar
-silver
-vim-ags
 
 emmet-vim
 

@@ -129,12 +129,9 @@ let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 
-" CtrlP
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-set wildignore+=*.pyc                       " < ---------- Python
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip    " < ---------- Linux/MacOSX
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe " < ---------- Windows
+" fzf
+set rtp+=/usr/local/opt/fzf " Add fzf to Runtime Path
+nnoremap <silent> <C-p> :FZF<CR>
 
 " indentLine
 let g:indentLine_char = '⎸'
