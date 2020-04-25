@@ -9,8 +9,8 @@
 # codedark theme
 git clone https://github.com/tomasiser/vim-code-dark.git ~/.vim/
 
-# Pull the .vimrc
-wget -q -O ~/.vimrc  https://raw.githubusercontent.com/DusanDimitric/dotfiles/master/.vimrc
+# Copy the .vimrc
+cp .vimrc $HOME/.vimrc
 
 ###############################################################################
 
