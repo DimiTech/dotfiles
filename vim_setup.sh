@@ -26,11 +26,10 @@ wget -q -O ~/.vimrc  https://raw.githubusercontent.com/DusanDimitric/dotfiles/ma
 #   set_group syntax-highlighting
 #
 function set_group () {
-    package_group=$1
-      path="$HOME/.vim/pack/$package_group/start"
-        mkdir -p "$path"
-          cd "$path" || exit
-          
+  package_group=$1
+  path="$HOME/.vim/pack/$package_group/start"
+  mkdir -p "$path"
+  cd "$path" || exit
 }
 # Clone or update a git repo in the current directory.
 #
@@ -41,17 +40,16 @@ function set_group () {
 #   package https://github.com/tpope/vim-endwise.git
 #
 function package () {
-    repo_url=$1
-      expected_repo=$(basename "$repo_url" .git)
-        if [ -d "$expected_repo"  ]; then
-              cd "$expected_repo" || exit
-                  result=$(git pull --force)
-                      echo "$expected_repo: $result"
-                        else
-                              echo "$expected_repo: Installing..."
-                                  git clone -q "$repo_url"
-                                    fi
-                                    
+  repo_url=$1
+  expected_repo=$(basename "$repo_url" .git)
+  if [ -d "$expected_repo" ]; then
+    cd "$expected_repo" || exit
+    result=$(git pull --force)
+    echo "$expected_repo: $result"
+  else
+    echo "$expected_repo: Installing..."
+    git clone -q "$repo_url"
+  fi
 }
 
 (
