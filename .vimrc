@@ -84,47 +84,16 @@ au BufRead,BufNewFile nginx.conf set ft=nginx
 " ------------------------------- Plugins ----------------------------------- "
 " --------------------------------------------------------------------------- "
 
+" ------------------------------- General ----------------------------------- "
+
 " Use the `codedark` theme (Visual Studio like)
 colorscheme codedark
 
-" Enable pathogen!
-execute pathogen#infect()
-
-" Syntastic stuff
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:statline_syntastic = 0
+" Activate rainbow
+let g:rainbow_active=1
 
 " ------------------------- Language Specific ------------------------------- "
 
-" Syntastic for C programming
-" Include the SDL2 directory so that errors are not being shown
-let g:syntastic_c_include_dirs = ['/usr/local/include/SDL2']
-
-" Syntastic for C++ programming
-" Include the SDL2 directory so that errors are not being shown
-let g:syntastic_cpp_include_dirs = ['/usr/local/include/SDL2']
-
-" Syntastic - JavaScript + ESLint
-let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint' " Use the project-specific 'eslint' binary
-
-" Syntastic - TypeScript + ESLint
-let g:syntastic_typescript_checkers=['eslint']
-let g:syntastic_typescript_eslint_exe='$(npm bin)/eslint' " Use the project-specific 'eslint' binary
-
-" Tsuquyomi - Disable `tsc` checking, so that it doesn't interfere with Syntastic
-let g:tsuquyomi_disable_quickfix = 1
-
-" vim-go
-" TODO: See if this is necessary
-let g:go_bin_path = "/usr/local/go/bin"
 
 " ----------------------------- Other Plugins ------------------------------- "
 
@@ -134,12 +103,13 @@ let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 
 " fzf
-set rtp+=/usr/local/opt/fzf " Add fzf to Runtime Path
+set rtp+=/usr/bin/fzf       " Add fzf to Runtime Path (Linux)
+set rtp+=/usr/local/opt/fzf " Add fzf to Runtime Path (MacOS)
 nnoremap <leader>s :<C-u>FZF<CR>
 
 " indentLine
 let g:indentLine_char = '⎸'
-let g:indentLine_color_term = 0
+let g:indentLine_color_term = 240
 
 " vim-json
 let g:vim_json_syntax_conceal = 0
@@ -183,7 +153,7 @@ endfunc
 :autocmd FileType c iabbr fn void () {<Enter><Enter>}<Up><Up><C-O>W<C-R>=Eatchar('\s')<CR>
 
 " JavaScript
-:autocmd FileType javascript iabbr cl console.log('');<C-O>F'<C-R>=Eatchar('\s')<CR>
+:autocmd FileType javascript iabbr cl console.log();<C-O>F)<C-R>=Eatchar('\s')<CR>
 " inoremap version of console.log
 " :autocmd FileType javascript inoremap cl console.log('');<C-O>F'<C-R>=Eatchar('\s')<CR>
 :autocmd FileType javascript iabbr forl for (int i = 0; i < ; ++i) {<Enter>}<esc>k$7hi

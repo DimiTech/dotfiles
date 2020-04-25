@@ -1,10 +1,16 @@
 ## Requirements
 
-**fzf** - used for fuzzy searching
+* **git** - for pulling vim plugins
+
+* **fzf** - used for fuzzy searching
 
 Useful `fzf` resources:
 - https://dev.to/vintharas/5-minutes-vim-ctrlp-considered-harmful-48eg
 - https://www.youtube.com/watch?v=qgG5Jhi_Els
+
+### MacOS Specific
+
+Reinstall `vim` on MacOS, because the stock one is not the latest and does not have the necessary features enabled, such as `+clipboard`
 
 ## Vim
 
@@ -12,8 +18,9 @@ Useful `fzf` resources:
 
 The following plug-ins are used:
 ```
-fzf
 coc
+
+fzf.vim (https://github.com/junegunn/fzf.vim)
 
 nerdtree
 
