@@ -7,7 +7,7 @@
 ###############################################################################
 
 # codedark theme
-git clone https://github.com/tomasiser/vim-code-dark.git ~/.vim/
+git clone https://github.com/tomasiser/vim-code-dark.git $HOME/.vim/
 
 # Copy the .vimrc
 cp .vimrc $HOME/.vimrc
