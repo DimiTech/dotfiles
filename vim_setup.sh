@@ -55,7 +55,8 @@ function package () {
 (
 set_group vendor
 package https://github.com/junegunn/fzf.vim.git
-package https://github.com/jremmen/vim-ripgrep
+package https://github.com/jremmen/vim-ripgrep.git
+package https://github.com/stefandtw/quickfix-reflector.vim.git
 package https://github.com/Yggdroot/indentLine.git
 package https://github.com/preservim/nerdtree.git
 package https://github.com/tomtom/tcomment_vim
@@ -70,9 +71,7 @@ package https://github.com/elzr/vim-json.git
 package https://github.com/dense-analysis/ale.git
 package https://github.com/leafgarland/typescript-vim.git
 wait
-
 ) &
-
 wait
 
 # Add documentation:
