@@ -1,13 +1,13 @@
 # Requirements
 
-* **git** - for pulling vim plugins
+**git** - for pulling vim plugins
 
-* **ripgrep** - used for project-wide search/replace
+**ripgrep** - used for project-wide search/replace
 
 Useful `ripgrep` resources:
 - https://www.mattlayman.com/blog/2019/supercharging-vim-blazing-fast-search/
 
-* **fzf** - used for fuzzy searching
+**fzf** - used for fuzzy searching
 
 Useful `fzf` resources:
 - https://dev.to/vintharas/5-minutes-vim-ctrlp-considered-harmful-48eg
@@ -21,38 +21,10 @@ Reinstall `vim` on MacOS, because the stock one is not the latest and does not h
 
 ## Installing plugins and theming:
 
-The following plug-ins are used:
+Run the setup script:
+
 ```
-coc
-
-fzf.vim (https://github.com/junegunn/fzf.vim)
-
-nerdtree
-
-indentLine
-supertab
-tcomment (https://github.com/tomtom/tcomment_vim)
-tabularize
-surround.vim
-vim-auto-pair
-rainbow (https://github.com/luochen1990/rainbow)
-vim-json
-
-vim-gitgutter
-vim-fugitive
-
-diffchar
-
-emmet-vim
-
-" Language-specific:
-
-" Typescript
-typescript-vim
-tsuquyomi
-
-" Go
-vim-go (https://github.com/fatih/vim-go)
+./vim_setup.sh
 ```
 
 ## Theme
