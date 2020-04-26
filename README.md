@@ -2,14 +2,10 @@
 
 **git** - for pulling vim plugins
 
-**ripgrep** - used for project-wide search/replace
-
-Useful `ripgrep` resources:
+**ripgrep** - used for project-wide search/replace, useful `ripgrep` resources:
 - https://www.mattlayman.com/blog/2019/supercharging-vim-blazing-fast-search/
 
-**fzf** - used for fuzzy searching
-
-Useful `fzf` resources:
+**fzf** - used for fuzzy searching, useful `fzf` resources:
 - https://dev.to/vintharas/5-minutes-vim-ctrlp-considered-harmful-48eg
 - https://www.youtube.com/watch?v=qgG5Jhi_Els
 
