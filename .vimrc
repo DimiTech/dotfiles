@@ -105,10 +105,14 @@ autocmd FileType nerdtree setlocal relativenumber
 " fzf
 set rtp+=/usr/bin/fzf       " Add fzf to Runtime Path (Linux)
 set rtp+=/usr/local/opt/fzf " Add fzf to Runtime Path (MacOS)
-nnoremap <leader>s :<C-u>FZF<CR>
+" git search - https://github.com/junegunn/fzf.vim/issues/121#issuecomment-575922206
+nnoremap <leader>gs :<C-u>GFiles --cached --others --exclude-standard<CR>
+" All files search:
+nnoremap <leader>s :<C-u>Files<CR>
 
 " ripgrep
 let g:rg_command = 'rg --vimgrep -S'
+nnoremap <leader>r :<C-u>Rg 
 
 " indentLine
 let g:indentLine_char = '⎸'
