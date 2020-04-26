@@ -107,6 +107,9 @@ set rtp+=/usr/bin/fzf       " Add fzf to Runtime Path (Linux)
 set rtp+=/usr/local/opt/fzf " Add fzf to Runtime Path (MacOS)
 nnoremap <leader>s :<C-u>FZF<CR>
 
+" ripgrep
+let g:rg_command = 'rg --vimgrep -S'
+
 " indentLine
 let g:indentLine_char = '⎸'
 let g:indentLine_color_term = 240
