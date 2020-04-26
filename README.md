@@ -1,25 +1,25 @@
-## Requirements
+# Requirements
 
-### **git** - for pulling vim plugins
+## * **git** - for pulling vim plugins
 
-### **ripgrep** - used for project-wide search/replace
+## * **ripgrep** - used for project-wide search/replace
 
 Useful `ripgrep` resources:
 - https://www.mattlayman.com/blog/2019/supercharging-vim-blazing-fast-search/
 
-### **fzf** - used for fuzzy searching
+## * **fzf** - used for fuzzy searching
 
 Useful `fzf` resources:
 - https://dev.to/vintharas/5-minutes-vim-ctrlp-considered-harmful-48eg
 - https://www.youtube.com/watch?v=qgG5Jhi_Els
 
-### MacOS Specific
+## MacOS Specific
 
 Reinstall `vim` on MacOS, because the stock one is not the latest and does not have the necessary features enabled, such as `+clipboard`
 
-## Vim
+# Vim
 
-### Installing plugins and theming:
+## Installing plugins and theming:
 
 The following plug-ins are used:
 ```
@@ -55,11 +55,11 @@ tsuquyomi
 vim-go (https://github.com/fatih/vim-go)
 ```
 
-### Theme
+## Theme
 
 The theme is called `codedark`, influenced by Visual Studio colors.
 
-### JavaScript syntax support
+## JavaScript syntax support
 
 Syntastic works well with `eslint`, just make sure that `eslint` is installed globally as well as locally: `npm i -g eslint`
 
@@ -73,16 +73,16 @@ If the linter doesn't work, try debugging `syntastic` by opening a `typescript` 
 :mes
 ```
 
-### nginx syntax support:
+## nginx syntax support:
 
 Here is how to set it up:
 * https://serverfault.com/a/782503
 
-### vim-go - Installation
+## vim-go - Installation
 
 In order to run `:GoInstallBinaries` from vim and for it to work, make sure to run vim as a superuser: `sudo vim`, and then run `:GoInstallBinaries`.
 
-## Bash
+# Bash
 
 A bash framework called `bash-it` is used, along with its `pro` theme.
 
