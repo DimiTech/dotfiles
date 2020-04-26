@@ -2,6 +2,10 @@
 
 * **git** - for pulling vim plugins
 
+* **ripgrep** - used for project-wide search/replace
+Useful `ripgrep` resources:
+- https://www.mattlayman.com/blog/2019/supercharging-vim-blazing-fast-search/
+
 * **fzf** - used for fuzzy searching
 
 Useful `fzf` resources:
