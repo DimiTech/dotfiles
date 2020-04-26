@@ -27,29 +27,6 @@ Run the setup script:
 
 The theme is called `codedark`, influenced by Visual Studio colors.
 
-## JavaScript syntax support
-
-Syntastic works well with `eslint`, just make sure that `eslint` is installed globally as well as locally: `npm i -g eslint`
-
-There is an example project embedded in this repo called `ts-eslint-test` that you can use to test out if `eslint` is working properly inside `vim`.
-
-If the linter doesn't work, try debugging `syntastic` by opening a `typescript` file and executing the following commands in vim:
-
-```
-:let g:syntastic_debug=3
-:SyntasticCheck eslint
-:mes
-```
-
-## nginx syntax support:
-
-Here is how to set it up:
-* https://serverfault.com/a/782503
-
-## vim-go - Installation
-
-In order to run `:GoInstallBinaries` from vim and for it to work, make sure to run vim as a superuser: `sudo vim`, and then run `:GoInstallBinaries`.
-
 # Bash
 
 A bash framework called `bash-it` is used, along with its `pro` theme.
