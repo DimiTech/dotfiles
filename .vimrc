@@ -159,14 +159,15 @@ endfunc
 :autocmd FileType c iabbr forl for (int i = 0; i < ; ++i) {<Enter>}<esc>k$7hi
 :autocmd FileType c iabbr fn void () {<Enter><Enter>}<Up><Up><C-O>W<C-R>=Eatchar('\s')<CR>
 
-" JavaScript
-:autocmd FileType javascript iabbr cl console.log()<C-O>F(<C-O>l<C-R>=Eatchar('\s')<CR>
+" JavaScript/TypeScript/TypeScriptReact - https://stackoverflow.com/questions/28310094/is-it-possible-to-include-multiple-file-types-when-using-the-filetype-event
+:autocmd FileType javascript,typescript,typescriptreact iabbr cl console.log()<C-O>F(<C-O>l<C-R>=Eatchar('\s')<CR>
 " inoremap version of console.log
 " :autocmd FileType javascript inoremap cl console.log('');<C-O>F'<C-R>=Eatchar('\s')<CR>
-:autocmd FileType javascript iabbr forl for (int i = 0; i <; ++i) {<Enter>}<esc>k$7hi
-:autocmd FileType javascript iabbrev fn function () {<Enter><Enter>}<Up><Up><C-O>W<C-R>=Eatchar('\s')<CR>
+:autocmd FileType javascript,typescript,typescriptreact iabbr forl for (int i = 0; i <; ++i) {<Enter>}<esc>k$7hi
+:autocmd FileType javascript,typescript,typescriptreact iabbrev fn function () {<Enter><Enter>}<Up><Up><C-O>W<C-R>=Eatchar('\s')<CR>
 " Without Eatchar()
 " :autocmd FileType javascript iabbrev fn function () {<Enter><Enter>}<Up><Up><C-O>W
+
 
 " Java
 :autocmd FileType java iabbr psvm public static void main(String[] args){<CR>}<esc>O
