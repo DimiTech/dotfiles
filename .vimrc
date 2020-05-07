@@ -142,7 +142,8 @@ set updatetime=500 " <- refresh vim buffers every 500ms
 " ------------------------------ Mappings ----------------------------------- "
 " --------------------------------------------------------------------------- "
 
-map <silent> <C-n> :NERDTreeFind<CR>
+map <silent> <C-n> :NERDTreeToggle<CR>
+map <silent> <C-j> :NERDTreeFind<CR>
 
 " CTRL + s - Save
 " https://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
