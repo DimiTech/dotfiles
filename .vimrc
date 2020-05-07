@@ -52,11 +52,6 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" Resize windows using arrow keys (https://youtu.be/Zir28KFCSQw)
-noremap <silent> <C-Left> :vertical resize -5<CR>
-noremap <silent> <C-Right> :vertical resize +5<CR>
-noremap <silent> <C-Up> :resize +5<CR>
-noremap <silent> <C-Down> :resize -5<CR>
 
 set autoindent " Turn on the auto-intentation feature.
 set tabstop=2  " Display tabs as 2 whitespace characters.
@@ -147,8 +142,7 @@ set updatetime=500 " <- refresh vim buffers every 500ms
 " ------------------------------ Mappings ----------------------------------- "
 " --------------------------------------------------------------------------- "
 
-map <silent> <C-n> :NERDTreeToggle<CR>
-map <silent> <C-j> :NERDTreeFind<CR>
+map <silent> <C-n> :NERDTreeFind<CR>
 
 " CTRL + s - Save
 " https://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
