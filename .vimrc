@@ -45,6 +45,12 @@ set splitright
 " Open new horizontal split to the bottom
 set splitbelow
 
+" Remap window navigation to: CTRL + hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 set autoindent " Turn on the auto-intentation feature.
 set tabstop=2  " Display tabs as 2 whitespace characters.
 set expandtab " On pressing tab, insert 2 spaces
