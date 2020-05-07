@@ -100,6 +100,11 @@ let g:rainbow_active=1
 
 " ------------------------- Language Specific ------------------------------- "
 
+" ale
+let g:ale_open_list = 1
+
+" markdown-preview
+let g:mkdp_auto_start = 1
 
 " ----------------------------- Other Plugins ------------------------------- "
 
@@ -112,9 +117,9 @@ autocmd FileType nerdtree setlocal relativenumber
 set rtp+=/usr/bin/fzf       " Add fzf to Runtime Path (Linux)
 set rtp+=/usr/local/opt/fzf " Add fzf to Runtime Path (MacOS)
 " git search - https://github.com/junegunn/fzf.vim/issues/121#issuecomment-575922206
-nnoremap <leader>gs :<C-u>GFiles --cached --others --exclude-standard<CR>
+nnoremap <leader>g :<C-u>GFiles --cached --others --exclude-standard<CR>
 " All files search:
-nnoremap <leader>s :<C-u>Files<CR>
+nnoremap <leader>f :<C-u>Files<CR>
 
 " ripgrep
 let g:rg_command = 'rg --vimgrep -S'
@@ -173,7 +178,6 @@ endfunc
 :autocmd FileType javascript,typescript,typescriptreact iabbrev fn function () {<Enter><Enter>}<Up><Up><C-O>W<C-R>=Eatchar('\s')<CR>
 " Without Eatchar()
 " :autocmd FileType javascript iabbrev fn function () {<Enter><Enter>}<Up><Up><C-O>W
-
 
 " Java
 :autocmd FileType java iabbr psvm public static void main(String[] args){<CR>}<esc>O
