@@ -113,6 +113,7 @@ let g:mkdp_auto_start = 1
 " NERDTree - always show hidden files
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
+let NERDTreeQuitOnOpen=1
 autocmd FileType nerdtree setlocal relativenumber
 
 " fzf
