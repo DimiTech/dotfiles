@@ -40,16 +40,23 @@ set clipboard^=unnamed,unnamedplus
 " TAB/INDENTATION STUFF
 filetype plugin indent on
 
+" Windows / Splits
+" https://thoughtbot.com/blog/vim-splits-move-faster-and-more-naturally
+
 " Open new vertical split to the right
 set splitright
 " Open new horizontal split to the bottom
 set splitbelow
-
 " Remap window navigation to: CTRL + hjkl
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+" Resize windows using arrow keys (https://youtu.be/Zir28KFCSQw)
+noremap <silent> <C-Left> :vertical resize -5<CR>
+noremap <silent> <C-Right> :vertical resize +5<CR>
+noremap <silent> <C-Up> :resize +5<CR>
+noremap <silent> <C-Down> :resize -5<CR>
 
 set autoindent " Turn on the auto-intentation feature.
 set tabstop=2  " Display tabs as 2 whitespace characters.
