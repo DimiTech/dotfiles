@@ -29,7 +29,7 @@ The theme is called `codedark`, influenced by Visual Studio colors.
 
 # Bash
 
-A bash framework called `bash-it` is used, along with its `pro` theme.
+A bash framework called [bash-it](https://github.com/Bash-it/bash-it) is used, along with its `pro` theme.
 
 **LINUX:** Make sure to add the following line to the bottom of your `.bashr`:
 ```
