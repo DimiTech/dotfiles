@@ -129,7 +129,7 @@ let g:rg_command = 'rg --vimgrep -S'
 nnoremap <leader>r :<C-u>Rg 
 
 " indentLine
-let g:indentLine_char = '⎸'
+let g:indentLine_char = '⦙'
 let g:indentLine_color_term = 240
 
 " vim-json
