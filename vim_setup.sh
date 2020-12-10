@@ -70,6 +70,7 @@ package https://github.com/mattn/emmet-vim.git
 package https://github.com/elzr/vim-json.git
 package https://github.com/dense-analysis/ale.git
 package https://github.com/leafgarland/typescript-vim.git
+package https://github.com/prettier/vim-prettier
 wait
 ) &
 wait
