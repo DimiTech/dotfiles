@@ -109,6 +109,7 @@ let g:ale_open_list = 1
 let g:mkdp_auto_start = 1
 
 " prettier
+let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
 " ----------------------------- Other Plugins ------------------------------- "
