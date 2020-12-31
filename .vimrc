@@ -130,7 +130,7 @@ nnoremap <leader>f :<C-u>Files<CR>
 
 " ripgrep
 let g:rg_command = 'rg --vimgrep -S'
-nnoremap <leader>r :<C-u>Rg 
+nnoremap <leader>r :<C-u>Rg -e 
 
 " indentLine
 let g:indentLine_char = '⦙'
