@@ -64,6 +64,7 @@ package https://github.com/tomtom/tcomment_vim
 package https://github.com/ervandew/supertab.git
 package https://github.com/godlygeek/tabular
 package https://github.com/tpope/vim-surround.git
+package https://github.com/jiangmiao/auto-pairs.git
 package https://github.com/luochen1990/rainbow
 package https://github.com/airblade/vim-gitgutter.git
 package https://github.com/mattn/emmet-vim.git
