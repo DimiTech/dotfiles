@@ -129,7 +129,7 @@ nnoremap <leader>g :<C-u>GFiles --cached --others --exclude-standard<CR>
 nnoremap <leader>f :<C-u>Files<CR>
 
 " ripgrep
-let g:rg_command = 'rg --vimgrep -S'
+let g:rg_command = 'rg --vimgrep -S --hidden --glob "!**/.git/**"'
 nnoremap <leader>r :<C-u>Rg -e 
 
 " indentLine
