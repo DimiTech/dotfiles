@@ -73,7 +73,6 @@ set laststatus=2
 set showtabline=1
 set noshowmode
 
-
 syntax on " Use syntax coloring
 set number " Always show line numbers
 set relativenumber " Use relative line numbering
@@ -112,6 +111,9 @@ let g:mkdp_auto_start = 1
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
+" vim-go
+let g:go_fmt_autosave = 1
+
 " ----------------------------- Other Plugins ------------------------------- "
 
 " NERDTree - always show hidden files
@@ -147,8 +149,9 @@ set updatetime=500 " <- refresh vim buffers every 500ms
 " ------------------------------ Mappings ----------------------------------- "
 " --------------------------------------------------------------------------- "
 
-map <silent> <C-n> :NERDTreeToggle<CR>
-map <silent> <C-j> :NERDTreeFind<CR>
+" `//` to search for visually selected text
+" https://vim.fandom.com/wiki/Search_for_visually_selected_text
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 " CTRL + s - Save
 " https://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s
@@ -160,6 +163,9 @@ inoremap <silent> <C-S> <C-O>:update<CR>
 " https://hashrocket.com/blog/posts/8-great-vim-mappings
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
+
+map <silent> <C-n> :NERDTreeToggle<CR>
+map <silent> <C-j> :NERDTreeFind<CR>
 
 " --------------------------------------------------------------------------- "
 " ---------------------------- Abbreviations -------------------------------- "
@@ -185,6 +191,3 @@ endfunc
 :autocmd FileType javascript,typescript,typescriptreact iabbrev fn function () {<Enter><Enter>}<Up><Up><C-O>W<C-R>=Eatchar('\s')<CR>
 " Without Eatchar()
 " :autocmd FileType javascript iabbrev fn function () {<Enter><Enter>}<Up><Up><C-O>W
-
-" Java
-:autocmd FileType java iabbr psvm public static void main(String[] args){<CR>}<esc>O
