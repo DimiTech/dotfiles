@@ -9,6 +9,9 @@
 - https://dev.to/vintharas/5-minutes-vim-ctrlp-considered-harmful-48eg
 - https://www.youtube.com/watch?v=qgG5Jhi_Els
 
+**Universal ctags**
+- https://github.com/universal-ctags/ctags
+
 ## MacOS Specific
 
 Reinstall `vim` on MacOS, because the stock one is not the latest and does not have the necessary features enabled, such as `+clipboard`
@@ -26,6 +29,20 @@ Run the setup script:
 ## Theme
 
 The theme is called `codedark`, influenced by Visual Studio colors.
+
+## Vim Testing
+
+### Check the test project:
+  - [ ] `cd ts-eslint-test && npm install`
+  - [ ] `vim .` <- Check if NERDTree is working
+  - [ ] Check if `syntax highlighting` works
+  - [ ] Check if `linting` works
+  - [ ] Check if `CTRL + S` (`CMD + S`) saves files
+  - [ ] Check if `prettier` works
+  - [ ] Check if `copy & paste` works
+  - [ ] Check if `FZF` works
+  - [ ] Check if `RipGrep` works
+  - [ ] Check if `ctags` works (`ctags -R` to build the tags)
 
 # Bash
 
