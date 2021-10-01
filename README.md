@@ -42,7 +42,7 @@ The theme is called `codedark`, influenced by Visual Studio colors.
   - [ ] Check if `copy & paste` works
   - [ ] Check if `FZF` works
   - [ ] Check if `RipGrep` works
-  - [ ] Check if `ctags` works (`ctags -R` to build the tags)
+  - [ ] Check if `ctags` works (`ctags` to build the tags, it should use the config from `~/.ctags.d/*.ctags`)
 
 # Bash
 
