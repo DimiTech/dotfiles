@@ -1,0 +1,29 @@
+# General
+
+--recurse=yes
+--exclude=.git
+--exclude=.svn
+--exclude=BUILD
+--exclude=build/*
+--exclude=vendor/*
+--exclude=db/*
+--exclude=log/*
+--exclude=\*.min.\*
+--exclude=\*.swp
+--exclude=\*.bak
+--exclude=\*.pyc
+--exclude=\*.class
+--exclude=\*.sln
+--exclude=\*.csproj
+--exclude=\*.csproj.user
+--exclude=\*.cache
+--exclude=\*.dll
+--exclude=\*.pdb
+
+# JavaScript
+
+--exclude=node_modules/*
+
+# TypeScript
+
+--langmap=TypeScript:.ts.tsx
