@@ -77,6 +77,12 @@ syntax on " Use syntax coloring
 set number " Always show line numbers
 set relativenumber " Use relative line numbering
 
+" tags
+" Look upward for a tags file from the current directory until you reach $HOME
+set tags=./tags,tags;$HOME
+" Open tag in new tab
+nnoremap <silent><leader><C-]> <C-w><C-]><C-w>T
+
 " --------------------------------------------------------------------------- "
 " ------------------------------ Filetypes ---------------------------------- "
 " --------------------------------------------------------------------------- "
