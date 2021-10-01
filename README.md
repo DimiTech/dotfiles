@@ -48,7 +48,7 @@ The theme is called `codedark`, influenced by Visual Studio colors.
 
 A bash framework called [bash-it](https://github.com/Bash-it/bash-it) is used, along with its `pro` theme.
 
-**LINUX:** Make sure to add the following line to the bottom of your `.bashr`:
+**LINUX:** Make sure to add the following line to the bottom of your `.bashrc`:
 ```
 stty -ixon
 ```
