@@ -12,6 +12,12 @@
 **Universal ctags**
 - https://github.com/universal-ctags/ctags
 
+**bat**
+- https://github.com/sharkdp/bat
+
+**delta**
+- https://github.com/dandavison/delta
+
 ## MacOS Specific
 
 Reinstall `vim` on MacOS, because the stock one is not the latest and does not have the necessary features enabled, such as `+clipboard`
