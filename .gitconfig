@@ -3,7 +3,9 @@
   name = Dusan Dimitric
 [github]
   user = DusanDimitric
-[push]
-  default = simple
 [diff]
   tool = vimdiff
+[push]
+  default = simple
+[pull]
+	ff = only
