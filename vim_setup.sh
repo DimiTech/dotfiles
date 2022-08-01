@@ -6,6 +6,8 @@
 #
 ###############################################################################
 
+mkdir -p ~/.vim
+
 # codedark theme
 git clone https://github.com/tomasiser/vim-code-dark.git
 cp -r ./vim-code-dark/ $HOME/.vim/ && rm -rf ./vim-code-dark/
@@ -55,6 +57,7 @@ function package () {
 
 (
 set_group vendor
+package https://github.com/junegunn/fzf.git
 package https://github.com/junegunn/fzf.vim.git
 package https://github.com/DusanDimitric/vim-ripgrep.git
 package https://github.com/stefandtw/quickfix-reflector.vim.git
