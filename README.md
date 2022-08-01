@@ -18,9 +18,19 @@
 **delta**
 - https://github.com/dandavison/delta
 
+Most of these can be installed on MacOS using Brew:
+```
+brew install ripgrep fzf bat delta
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+```
+
 ## MacOS Specific
 
-Reinstall `vim` on MacOS, because the stock one is not the latest and does not have the necessary features enabled, such as `+clipboard`
+On MacOS, check `+clipboard` feature is enabled:
+
+```
+vim --version | grep clipboard
+```
 
 # Vim
 
