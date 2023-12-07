@@ -20,7 +20,7 @@
 
 Most of these can be installed on MacOS using Brew:
 ```
-brew install ripgrep fzf bat git-delta
+brew install ripgrep fzf bat git-delta imgcat
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 ```
 
